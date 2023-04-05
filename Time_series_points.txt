@@ -1,0 +1,39 @@
+1.An ARIMA model is characterized by 3 terms-p,d,q
+ p is the order of the AR(AUTOREGRESSIVE) Term
+ q is the order of the Moving Average term
+ d is the number of differencing required to make a series statioary.
+
+2) In case we have a sesonal component in a time series,we call it SARIMA
+
+3)AR(Autoregressive) in ARIMA means it is a linear regression model,that uses its own 
+lagged values as predictors.
+
+So if the DV(Yt),then the IDV is (value of the DV at the previous time periods,i.e
+Yt-1,Yt-2,Yt-3...and so on..
+
+so if our metric(DV)  is 'sales' then sales in a current period (t) will depend on the
+sales in the period(t-1),(t-2),(t-3) and so on.
+
+4) The Moving average (MA) model also is a linear regression model,where the DV(Yt)
+is dependent on the IDV(Et,Et-1,Et-2...and so on) which is the preciction error E() at
+the current time period(Et) and its lagged values (Et-1,Et-2,Et-3....and so on)
+
+5) Both the AR and MA models are linear regression models,but we do not get a staright
+line as,we have fluctuautions in our plot due to trend,sesasonality,variance, noise
+elements.
+
+6) AR=p, MA= q (p,q=lags we want) D = differencing order. This differencing is done
+to make the series stationary. If we have more fluctuations,more differencing is 
+needed. 
+A stationary series will be more even,with minimum fluctuations.
+
+7)How do we understand a series is Stationary?
+
+ans--- A stationary series will have no trend. it will look like a scatterplot
+which shows no movement in a particular direction.
+When we get such a series,with no trend,we call it stationary.
+acheiving stationarity is THE MAIN ASSUMPTION IN TIME SERIES FORECASTING.
+
+
+8) So to sum it up,when we are forecasting sales,WE WILL START WITH THE ASSUMPTION 
+THAT THE CURRENT PERIOD SALES ARE DEPENDENT ON THE SALES OF THE PREVIOUS PERIOD/PERIODS.
